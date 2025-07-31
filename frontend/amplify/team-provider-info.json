@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-grocerycasecounts-dev-afc6c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423639202:role/amplify-grocerycasecounts-dev-afc6c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423639202:role/amplify-grocerycasecounts-dev-afc6c-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-grocerycasecounts-dev-afc6c-deployment",
+      "UnauthRoleName": "amplify-grocerycasecounts-dev-afc6c-unauthRole",
+      "StackName": "amplify-grocerycasecounts-dev-afc6c",
+      "StackId": "arn:aws:cloudformation:us-east-2:637423639202:stack/amplify-grocerycasecounts-dev-afc6c/c7cba1c0-6e22-11f0-a370-0a5f98f64f9d",
+      "AmplifyAppId": "d176ux4pdx2clr"
+    }
+  }
+}
