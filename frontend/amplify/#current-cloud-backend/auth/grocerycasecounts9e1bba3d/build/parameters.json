@@ -1,0 +1,59 @@
+{
+  "identityPoolName": "grocerycasecounts9e1bba3d_identitypool_9e1bba3d",
+  "allowUnauthenticatedIdentities": false,
+  "resourceNameTruncated": "grocer9e1bba3d",
+  "userPoolName": "grocerycasecounts9e1bba3d_userpool_9e1bba3d",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaConfiguration": "OFF",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsVerificationMessage": "Your verification code is {####}",
+  "emailVerificationSubject": "Your verification code",
+  "emailVerificationMessage": "Your verification code is {####}",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "requiredAttributes": [
+    "email"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": 30,
+  "userpoolClientWriteAttributes": [
+    "email"
+  ],
+  "userpoolClientReadAttributes": [
+    "email"
+  ],
+  "userpoolClientLambdaRole": "grocer9e1bba3d_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "sharedId": "9e1bba3d",
+  "resourceName": "grocerycasecounts9e1bba3d",
+  "authSelections": "identityPoolAndUserPool",
+  "useDefault": "default",
+  "usernameAttributes": [
+    "email, phone_number"
+  ],
+  "userPoolGroupList": [],
+  "serviceName": "Cognito",
+  "usernameCaseSensitive": false,
+  "useEnabledMfas": true,
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "dependsOn": []
+}
