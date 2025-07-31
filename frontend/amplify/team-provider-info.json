@@ -10,6 +10,11 @@
       "StackName": "amplify-grocerycasecounts-dev-afc6c",
       "StackId": "arn:aws:cloudformation:us-east-2:637423639202:stack/amplify-grocerycasecounts-dev-afc6c/c7cba1c0-6e22-11f0-a370-0a5f98f64f9d",
       "AmplifyAppId": "d176ux4pdx2clr"
+    },
+    "categories": {
+      "auth": {
+        "grocerycasecounts9e1bba3d": {}
+      }
     }
   }
 }
