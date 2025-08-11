@@ -95,7 +95,7 @@ export function useShiftState() {
 
     return { totalCases, totalHours, avgRate, excludedCount };
   }, [shift.rows]);
-  
+
     const validation = useMemo(() => validateShift(shift.rows), [shift.rows]);
 
   // “Save Progress” (just stamps a time; data already auto-saved as draft)
@@ -115,5 +115,5 @@ export function useShiftState() {
     });
   }
 
-  return { shift, updateRow, summary, saveProgress, submitShift };
+  return { shift, updateRow, summary, saveProgress, submitShift, validation };
 }
