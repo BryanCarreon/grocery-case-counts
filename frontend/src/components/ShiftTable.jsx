@@ -14,8 +14,9 @@ export default function ShiftTable({ rows, onUpdateRow, rowErrorsMap }) {
             <th className="px-3 py-2 font-semibold">End Time</th>
             <th className="px-3 py-2 font-semibold text-center">Lunch?</th>
             <th className="px-3 py-2 font-semibold text-center">Gang</th>
-            <th className="px-3 py-2 font-semibold">Case Count</th>
+            <th className="px-3 py-2 font-semibold">Total Cases</th>
             <th className="px-3 py-2 font-semibold">Comments</th>
+            <th className="px-3 py-2 font-semibold text-right">Case Count(cases/hr)</th>
           </tr>
         </thead>
         <tbody>

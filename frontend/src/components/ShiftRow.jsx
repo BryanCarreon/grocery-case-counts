@@ -1,9 +1,17 @@
 // A single row with controlled inputs. Controlled inputs = the UI value is always the value from state; onChange updates state.
 // src/components/ShiftRow.jsx
 import React from 'react';
+import { effectiveMinutesWorked } from '../utils/time';
 
 export default function ShiftRow({ row, onChange, errors = [] }) {
   const { aisle, employee, startTime, endTime, tookLunch, caseCount, comments, gangStock } = row;
+ 
+// Derived per-row metrics
+  const minutes = effectiveMinutesWorked(startTime, endTime, tookLunch);
+  const hours = minutes / 60;
+  const rate = (!gangStock && hours > 0 && Number.isFinite(Number(caseCount)))
+    ? (Number(caseCount) / hours)
+    : null; // null -> show "—"
 
   const errHas = (substr) => errors.some(e => e.toLowerCase().includes(substr));
   const errEmployee = errHas('employee');
@@ -93,9 +101,17 @@ export default function ShiftRow({ row, onChange, errors = [] }) {
           className={`w-full ${baseInput} border-gray-300`}
           value={comments}
           onChange={e => onChange({ comments: e.target.value })}
-          placeholder="Notes"
+          placeholder="Comments/Notes"
         />
       </td>
+     {/* Calculated Rate */}
+     <td className="px-3 py-2 text-right tabular-nums" title={
+     gangStock ? 'Excluded (Gang)' :
+     hours > 0 ? `Cases: ${caseCount} • Hours: ${hours.toFixed(2)}` :
+     'Enter times to calculate rate'
+     }>
+       {gangStock ? '—' : (hours > 0 ? rate.toFixed(2) : '—')}
+     </td>
     </tr>
   );
 }
